@@ -1,3 +1,5 @@
+let dotenv = require('dotenv');
+dotenv.config({ path: '.env' })
 let mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MongoUrl).then(() => {
