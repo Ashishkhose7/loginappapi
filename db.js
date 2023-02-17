@@ -1,6 +1,7 @@
 let dotenv = require('dotenv');
 dotenv.config({ path: '.env' })
 let mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MongoUrl).then(() => {
     console.log("Successfully connected to DB");
   })
