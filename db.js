@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MongoUrl, { useNewUrlParser: true }).then(() => {
+mongoose.connect(process.env.MongoUrl).then(() => {
     console.log("Successfully connected to DB");
   })
   .catch((error) => {
